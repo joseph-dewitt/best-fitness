@@ -55,7 +55,7 @@ class Register extends React.Component{
     this.setState({ [fieldName]: event.target.value });
   }
 
-	 render(){
+	render(){
     if(this.state.isRegistered) {
       return <Redirect to="/appointment" />;
     }

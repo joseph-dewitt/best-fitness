@@ -1,0 +1,32 @@
+.navbar{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: baseline;
+	background-color: #0077b3;
+}
+
+.left{
+	display: flex;
+	flex-grow: 1;
+}
+
+.right{
+	display: flex;
+	flex-direction: row-reverse;
+	flex-grow: 1;
+}
+
+.brand{
+	align-self: stretch;
+	border-style: solid;
+	border-radius: 10px;
+	background-color: #b3e6ff;
+	padding: 0 10px;
+}
+
+.log{
+	align-self: stretch;
+	color: #b3e6ff;
+	padding: 0 10px;
+}

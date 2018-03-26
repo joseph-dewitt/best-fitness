@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Switch, Route, Link } from 'react-router-dom'; 
+import { Switch, Route, Link } from 'react-router-dom';
+import './navbar.css';
 
 
 class Navbar extends React.Component {
@@ -11,41 +12,18 @@ class Navbar extends React.Component {
 		};
 	};
 	render() {
-		if(this.state.isLoggedIn){
-			return(
-			<div>
-				<nav className="navbar navbar-default navbar-fixed-top">
-					<div className="container-fluid">
-						<Link className="navbar-brand" to="/">Best Fitness</Link>
-						<div className="collapse navbar-collapse">
-							<ul className="nav navbar-nav navbar-right">
-								<li className="nav-item">
-									<Link className="nav-link glyphicon glyphicon-log-out" to="logout"> LOGOUT</Link>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-				<br/>
-				<br/>
-			</div> 
-		)}
 		return(
-			<div>
-				<nav className="navbar navbar-default navbar-fixed-top">
-					<div className="container-fluid">
-						<Link className="navbar-brand" to="/">Best Fitness</Link>
-						<div className="collapse navbar-collapse">
-							<ul className="nav navbar-nav navbar-right">
-								<li className="nav-item">
-									<Link className="nav-link glyphicon glyphicon-log-in" to="login"> LOGIN</Link>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-				<br/>
-				<br/>
+			<div className='navbar'>
+				<div className='left'>
+					<Link className='brand' to="/">
+						<h3>Best Fitness</h3>
+					</Link>
+				</div>
+				<div className='right'>
+					<Link className='log' to="logout">
+						<h3>LOGOUT</h3>
+					</Link>
+				</div>
 			</div> 
 	)};
 }	
